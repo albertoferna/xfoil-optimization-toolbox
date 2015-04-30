@@ -16,8 +16,8 @@ Cl = .4
 drags = np.zeros((5, 3))
 
 # m is camber in percent, p is position of max. camber in tenths
-for m in xrange(1,6):
-    for p in xrange(4,7):
+for m in range(1,6):
+    for p in range(4,7):
         
         # Make new airfoil NACAmp15
         airfoil = NACA4(m, p, 15)

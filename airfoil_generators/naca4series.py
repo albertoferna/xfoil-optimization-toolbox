@@ -8,7 +8,7 @@ The%20NACA%20airfoil%20series.pdf
 
 from __future__ import division
 import numpy as np
-from airfoilgen_baseclass import ParametricAirfoil
+from .airfoilgen_baseclass import ParametricAirfoil
 
 class NACA4(ParametricAirfoil):
 
@@ -52,12 +52,12 @@ def _example():
     test_airfoil = NACA4(c, l, t)
 
     # Print airfoil info
-    print test_airfoil
+    print(test_airfoil)
 
     # Get thickness
-    print ("Real thickness (including camber): {:.1%}"
+    print("Real thickness (including camber): {:.1%}"
           .format(test_airfoil.max_thickness()))
-    print ("Volume: {:.3f} chord^2".format(test_airfoil.area()))
+    print("Volume: {:.3f} chord^2".format(test_airfoil.area()))
 
     pts = test_airfoil.get_coords()
 
